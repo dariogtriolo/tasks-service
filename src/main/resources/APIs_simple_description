@@ -1,0 +1,9 @@
+USERS
+GET 	/users
+POST 	/users
+GET 	/users/{id}
+
+TASKS
+GET		/users/{id}/tasks
+POST 	/users/{id}/tasks
+GET		/users/{id}/tasks/{id}

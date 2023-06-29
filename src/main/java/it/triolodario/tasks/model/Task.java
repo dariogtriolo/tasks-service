@@ -5,7 +5,7 @@ import java.util.Set;
 
 public class Task {
 
-	enum Status {
+	public static enum Status {
 		TODO, DOING, DONE;
 	}
 
