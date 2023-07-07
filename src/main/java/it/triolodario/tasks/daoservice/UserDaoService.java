@@ -3,17 +3,16 @@ package it.triolodario.tasks.daoservice;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.stereotype.Component;
 
 import it.triolodario.tasks.model.User;
 
-@Component
 /*
  * Db operations
  * 
  */
+@Component
 public class UserDaoService {
 
 	// For now just use static in memory List

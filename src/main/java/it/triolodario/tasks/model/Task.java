@@ -9,15 +9,21 @@ public class Task {
 		TODO, DOING, DONE;
 	}
 
+	private Long id;
 	private String name;
 	private Set<Task> subtasks;
 	private Status status;
 
-	public Task(String name, Set<Task> subtasks, Status status) {
+	public Task(Long id, String name, Set<Task> subtasks, Status status) {
 		super();
+		this.id = id;
 		this.name = name;
 		this.subtasks = subtasks;
 		this.status = status;
+	}
+
+	public Long getId() {
+		return id;
 	}
 
 	public String getName() {
@@ -34,7 +40,7 @@ public class Task {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, status, subtasks);
+		return Objects.hash(id, name, status, subtasks);
 	}
 
 	@Override
@@ -46,11 +52,13 @@ public class Task {
 		if (getClass() != obj.getClass())
 			return false;
 		Task other = (Task) obj;
-		return Objects.equals(name, other.name) && status == other.status && Objects.equals(subtasks, other.subtasks);
+		return Objects.equals(id, other.id) && Objects.equals(name, other.name) && status == other.status
+				&& Objects.equals(subtasks, other.subtasks);
 	}
 
 	@Override
 	public String toString() {
-		return "Task [name=" + name + ", subtasks=" + subtasks + ", status=" + status + "]";
+		return "Task [id=" + id + ", name=" + name + ", subtasks=" + subtasks + ", status=" + status + "]";
 	}
+
 }

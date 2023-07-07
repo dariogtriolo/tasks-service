@@ -20,13 +20,13 @@ public class TaskController {
 	@GetMapping(path = "/api/tasks")
 	public Task getTasks() {
 
-		return new Task("myTask", new HashSet<>(), Task.Status.DOING);
+		return new Task(1L, "myTask", new HashSet<>(), Task.Status.DOING);
 	}
-	
-	@GetMapping(path = "/api/tasks/{name}")
-	public Task getTasksByName(@PathVariable String name ) {
 
-		return new Task(name, new HashSet<>(), Task.Status.DOING);
+	@GetMapping(path = "/api/tasks/{id}")
+	public Task getTasksByName(@PathVariable Long id) {
+
+		return new Task(id, "MyTask", new HashSet<>(), Task.Status.DOING);
 	}
 
 }
